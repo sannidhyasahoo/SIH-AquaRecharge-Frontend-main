@@ -1,7 +1,7 @@
 # Map Tools & AR Visualization Features
 
 ## Overview
-Added interactive map tools and AR visualization features to the AquaRecharge rainwater harvesting application.
+Added interactive map tools and AR visualization features to the MeghMalhaar rainwater harvesting application.
 
 ## New Features
 

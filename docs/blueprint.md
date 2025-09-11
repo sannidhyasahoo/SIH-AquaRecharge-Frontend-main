@@ -1,4 +1,4 @@
-# **App Name**: AquaRecharge
+# **App Name**: MeghMalhaar
 
 ## Core Features:
 

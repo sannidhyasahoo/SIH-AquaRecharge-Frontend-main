@@ -30,16 +30,16 @@ export default function DashboardPage() {
     // In a real app, you'd fetch the user's name from your auth provider
     setUserName('Alex');
   }, []);
-  
+
   const handleLogSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (waterSaved) {
-        setLogSubmitted(true);
-        // Reset after a few seconds
-        setTimeout(() => {
-            setLogSubmitted(false);
-            setWaterSaved('');
-        }, 3000);
+      setLogSubmitted(true);
+      // Reset after a few seconds
+      setTimeout(() => {
+        setLogSubmitted(false);
+        setWaterSaved('');
+      }, 3000);
     }
   };
 
@@ -59,73 +59,73 @@ export default function DashboardPage() {
 
       <section id="quick-actions" className="py-12">
         <div className="container mx-auto px-4">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <Card>
-                    <CardHeader>
-                        <CardTitle>Log Your Water Savings</CardTitle>
-                        <CardDescription>Enter the amount of water you've saved recently.</CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                        {logSubmitted ? (
-                            <div className="flex flex-col items-center justify-center h-full text-center p-4 bg-green-50 rounded-lg">
-                                <CheckCircle className="h-12 w-12 text-green-600 mb-2" />
-                                <p className="font-semibold text-green-700">Thank you for your contribution!</p>
-                                <p className="text-sm text-green-600">Your savings have been logged.</p>
-                            </div>
-                        ) : (
-                            <form onSubmit={handleLogSubmit} className="space-y-4">
-                                <div className="space-y-2">
-                                    <Label htmlFor="water-saved">Water Saved (in Liters)</Label>
-                                    <Input 
-                                        id="water-saved" 
-                                        type="number" 
-                                        placeholder="e.g., 500" 
-                                        value={waterSaved}
-                                        onChange={(e) => setWaterSaved(e.target.value)}
-                                        required 
-                                    />
-                                </div>
-                                <Button type="submit" className="w-full">
-                                    <PlusCircle className="mr-2" />
-                                    Log Savings
-                                </Button>
-                            </form>
-                        )}
-                    </CardContent>
-                </Card>
-                 <Card className="flex flex-col">
-                    <CardHeader>
-                        <CardTitle>View Your Impact</CardTitle>
-                        <CardDescription>See how your efforts translate into achievements and badges.</CardDescription>
-                    </CardHeader>
-                    <CardContent className="flex-1 flex flex-col items-center justify-center text-center p-6 bg-primary/10">
-                        <p className="text-lg font-semibold mb-4">You're making a real difference!</p>
-                         <Link href="/achievements">
-                            <Button size="lg">
-                                Go to Achievements
-                                <MoveRight className="ml-2" />
-                            </Button>
-                        </Link>
-                    </CardContent>
-                </Card>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle>Log Your Water Savings</CardTitle>
+                <CardDescription>Enter the amount of water you've saved recently.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                {logSubmitted ? (
+                  <div className="flex flex-col items-center justify-center h-full text-center p-4 bg-green-50 rounded-lg">
+                    <CheckCircle className="h-12 w-12 text-green-600 mb-2" />
+                    <p className="font-semibold text-green-700">Thank you for your contribution!</p>
+                    <p className="text-sm text-green-600">Your savings have been logged.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleLogSubmit} className="space-y-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="water-saved">Water Saved (in Liters)</Label>
+                      <Input
+                        id="water-saved"
+                        type="number"
+                        placeholder="e.g., 500"
+                        value={waterSaved}
+                        onChange={(e) => setWaterSaved(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <Button type="submit" className="w-full">
+                      <PlusCircle className="mr-2" />
+                      Log Savings
+                    </Button>
+                  </form>
+                )}
+              </CardContent>
+            </Card>
+            <Card className="flex flex-col">
+              <CardHeader>
+                <CardTitle>View Your Impact</CardTitle>
+                <CardDescription>See how your efforts translate into achievements and badges.</CardDescription>
+              </CardHeader>
+              <CardContent className="flex-1 flex flex-col items-center justify-center text-center p-6 bg-primary/10">
+                <p className="text-lg font-semibold mb-4">You're making a real difference!</p>
+                <Link href="/achievements">
+                  <Button size="lg">
+                    Go to Achievements
+                    <MoveRight className="ml-2" />
+                  </Button>
+                </Link>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
       <section id="cta" className="py-12 md:py-20 bg-primary/10">
         <div className="container mx-auto px-4 text-center">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">Ready to Make a Difference?</h2>
-            <p className="mt-4 max-w-2xl mx-auto md:text-xl text-muted-foreground">
-                Get your free, personalized rainwater harvesting plan today and take the first step towards a sustainable future.
-            </p>
-            <Link href="/recommend" className="mt-8 inline-block">
-                <Button size="lg" className="group text-lg py-7 px-8">
-                    Start Your Water-Saving Journey
-                    <MoveRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Button>
-            </Link>
+          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">Ready to Make a Difference?</h2>
+          <p className="mt-4 max-w-2xl mx-auto md:text-xl text-muted-foreground">
+            Get your free, personalized rainwater harvesting plan today and take the first step towards a sustainable future.
+          </p>
+          <Link href="/recommend" className="mt-8 inline-block">
+            <Button size="lg" className="group text-lg py-7 px-8">
+              Start Your Water-Saving Journey
+              <MoveRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </Link>
         </div>
-       </section>
+      </section>
 
       <section id="how-it-works" className="py-12 md:py-20">
         <div className="container mx-auto px-4">
@@ -176,7 +176,7 @@ export default function DashboardPage() {
         <div className="container mx-auto px-4">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl font-headline">
-              Why Choose AquaRecharge?
+              Why Choose MeghMalhaar?
             </h2>
             <p className="mt-4 max-w-2xl mx-auto text-muted-foreground md:text-xl">
               We provide smart, sustainable, and simple solutions for a water-secure future.
@@ -243,7 +243,7 @@ export default function DashboardPage() {
                   </Avatar>
                   <div>
                     <p className="italic">
-                      &ldquo;AquaRecharge gave me a clear, actionable plan. The
+                      &ldquo;MeghMalhaar gave me a clear, actionable plan. The
                       recharge pit is working great!&rdquo;
                     </p>
                     <p className="mt-2 font-semibold">- Jane Doe, Bangalore</p>
@@ -298,4 +298,3 @@ export default function DashboardPage() {
   );
 }
 
-    

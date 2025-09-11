@@ -1,6 +1,6 @@
-**SIH-2025-frontend**
+**MeghMalhaar**
 
-The frontend of the Rainwater Harvesting Website, AquaRecharge
+The frontend of the Rainwater Harvesting Website, MeghMalhaar
 
 Overview: A user-friendly web application designed to help individuals and communities assess the feasibility and details of rooftop rainwater harvesting and artificial groundwater recharge. By inputting basic site data, users receive personalized recommendations, GIS mapping, and actionable guides tailored to their location and needs.
 

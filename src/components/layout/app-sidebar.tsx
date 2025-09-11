@@ -34,25 +34,25 @@ export function AppSidebar() {
   return (
     <>
       <SidebarHeader className="border-b">
-        <Link href="/dashboard" className="flex items-center gap-2 font-semibold">
-          <Droplet className="h-6 w-6 text-primary" />
-          <span className="text-lg font-headline">AquaRecharge</span>
+        <Link href="/dashboard" className="flex items-center gap-2 font-semibold group">
+          <Droplet className="h-6 w-6 text-primary group-hover:text-primary/80 transition-colors" />
+          <span className="text-lg font-headline text-foreground group-hover:text-foreground/80 transition-colors">MeghMalhaar</span>
         </Link>
       </SidebarHeader>
       <SidebarContent className="p-2">
         <SidebarMenu>
           {links.map((link) => (
             <SidebarMenuItem key={link.label}>
-               <Link href={link.href}>
+              <Link href={link.href}>
                 <SidebarMenuButton
                   tooltip={link.label}
                   isActive={pathname === link.href}
                 >
-                    <link.icon className="h-4 w-4" />
-                    <span>{link.label}</span>
-                    {link.badge && seriousAlertsCount > 0 && (
-                      <SidebarMenuBadge>{seriousAlertsCount}</SidebarMenuBadge>
-                    )}
+                  <link.icon className="h-4 w-4" />
+                  <span>{link.label}</span>
+                  {link.badge && seriousAlertsCount > 0 && (
+                    <SidebarMenuBadge>{seriousAlertsCount}</SidebarMenuBadge>
+                  )}
                 </SidebarMenuButton>
               </Link>
             </SidebarMenuItem>
@@ -61,7 +61,7 @@ export function AppSidebar() {
       </SidebarContent>
       <SidebarFooter>
         <p className="px-4 text-center text-xs text-muted-foreground">
-          © 2024 AquaRecharge
+          © 2025 MeghMalhaar
         </p>
       </SidebarFooter>
     </>

@@ -1,9 +1,9 @@
 
 import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
+    Accordion,
+    AccordionContent,
+    AccordionItem,
+    AccordionTrigger,
 } from '@/components/ui/accordion';
 
 const faqs = [
@@ -47,35 +47,35 @@ const faqs = [
 
 
 export default function AboutPage() {
-  return (
-    <div className="container mx-auto max-w-3xl py-12 px-4">
-      <div className="space-y-12">
-        <div>
-            <h2 className="text-3xl font-bold font-headline mb-6 text-center">Frequently Asked Questions</h2>
-            <Accordion type="single" collapsible className="w-full mb-12">
-                {faqs.map((faq, index) => (
-                    <AccordionItem value={`item-${index + 1}`} key={index}>
-                        <AccordionTrigger className="text-lg text-left hover:no-underline">
-                            {faq.question}
-                        </AccordionTrigger>
-                        <AccordionContent className="text-base text-muted-foreground">
-                            {faq.answer}
-                        </AccordionContent>
-                    </AccordionItem>
-                ))}
-            </Accordion>
-            
-            <h2 className="text-3xl font-bold font-headline mb-6 text-center">About AquaRecharge</h2>
-            <div className="prose max-w-none text-muted-foreground text-lg">
-                <p>
-                This website hosts a comprehensive groundwater replenishment application designed to address India&apos;s critical groundwater depletion crisis. Leveraging publicly available scientific data from agencies like the Central Ground Water Board and the India Meteorological Department, the application democratizes access to complex hydrological and meteorological data.
-                </p>
-                <p>
-                Our goal is to support India&apos;s flagship water conservation missions, such as Jal Shakti Abhiyan and Atal Bhujal Yojana, by transforming national data into personalized, actionable intelligence. Users receive tailored insights into their local water context, harvesting potential, and cost-effective implementation strategies, fostering a culture of water stewardship that promotes water security, climate resilience, and economic benefits across urban and rural communities.
-                </p>
+    return (
+        <div className="container mx-auto max-w-3xl py-12 px-4">
+            <div className="space-y-12">
+                <div>
+                    <h2 className="text-3xl font-bold font-headline mb-6 text-center">Frequently Asked Questions</h2>
+                    <Accordion type="single" collapsible className="w-full mb-12">
+                        {faqs.map((faq, index) => (
+                            <AccordionItem value={`item-${index + 1}`} key={index}>
+                                <AccordionTrigger className="text-lg text-left hover:no-underline">
+                                    {faq.question}
+                                </AccordionTrigger>
+                                <AccordionContent className="text-base text-muted-foreground">
+                                    {faq.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+
+                    <h2 className="text-3xl font-bold font-headline mb-6 text-center">About MeghMalhaar</h2>
+                    <div className="prose max-w-none text-muted-foreground text-lg">
+                        <p>
+                            This website hosts a comprehensive groundwater replenishment application designed to address India&apos;s critical groundwater depletion crisis. Leveraging publicly available scientific data from agencies like the Central Ground Water Board and the India Meteorological Department, the application democratizes access to complex hydrological and meteorological data.
+                        </p>
+                        <p>
+                            Our goal is to support India&apos;s flagship water conservation missions, such as Jal Shakti Abhiyan and Atal Bhujal Yojana, by transforming national data into personalized, actionable intelligence. Users receive tailored insights into their local water context, harvesting potential, and cost-effective implementation strategies, fostering a culture of water stewardship that promotes water security, climate resilience, and economic benefits across urban and rural communities.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
-      </div>
-    </div>
-  );
+    );
 }

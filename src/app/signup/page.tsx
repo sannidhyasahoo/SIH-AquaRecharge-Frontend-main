@@ -33,10 +33,10 @@ export default function SignupPage() {
         }}
         data-ai-hint="water background"
       ></div>
-       <div className="absolute top-4 left-4">
+      <div className="absolute top-4 left-4">
         <Link href="/" className="flex items-center gap-2 font-semibold text-primary">
           <Droplet className="h-6 w-6" />
-          <span className="text-lg font-headline">AquaRecharge</span>
+          <span className="text-lg font-headline">MeghMalhaar</span>
         </Link>
       </div>
       <div className="relative z-10 flex flex-col items-center">
